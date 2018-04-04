@@ -47,7 +47,16 @@
 
   <!--RESPONSIVE TAB -->
   <link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
-
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-35843234-5', 'auto');
+    ga('send', 'pageview');
+  </script>
 </head>
 
 <body>
@@ -114,8 +123,8 @@
             <strong>Cédula, NIT, PEP y Cédula extranjería</strong>
           </p>
           <div class="bnts wow fadeInUp">
-            <a href="#contact" class="btn2">Contáctanos</a>
-            <a href="#pricing" class="btn2">Compra ahora</a>
+            <a href="#contact" class="btn2" onClick="ga('send','pageview','/contact');">Contáctanos</a>
+            <a href="#pricing" class="btn2" onClick="ga('send','pageview','/pricing');">Compra ahora</a>
           </div>
         </div>
       </div>
@@ -244,7 +253,7 @@
             <div class="f-img">
               <i class="fas fa-bolt fa-5x"></i>
             </div>
-            <a href="#">Tiempo real</a>
+            <a >Tiempo real</a>
             <p>Las
               <strong>consultas</strong> se realizan en
               <strong>tiempo real</strong> directamente sobre sobre las fuentes. No usamos bases de datos precargadas, solo información
@@ -257,7 +266,7 @@
             <div class="f-img">
               <i class="fas fa-hand-point-up fa-5x"></i>
             </div>
-            <a href="#">Facilidad de uso</a>
+            <a>Facilidad de uso</a>
             <p>Las consultas se realizan con
               <strong>un solo click</strong>, los analistas no requieren experiencia y pueden validar más personas en un día. </p>
           </div>
@@ -268,7 +277,7 @@
             <div class="f-img">
               <i class="fas fa-bullseye fa-5x"></i>
             </div>
-            <a href="#">Planes a la medida</a>
+            <a>Planes a la medida</a>
             <p>No importa el tamaño de tu organización, contamos con planes para cumplir
               <strong>cualquier necesidad</strong>.</p>
           </div>
@@ -419,7 +428,7 @@
               <div class="nomber-text-row">
                 <div class="nomber-text-row-inner">
                   <span>1. Formulario</span>
-                  <p>En este elemento se ingresan los documentos a consultar. Se puede hacer consultas sobre los siguientes
+                  <p>En este elemento se ingresan los documentos a consultar. <br> Se puede hacer consultas sobre los siguientes
                     documentos: Cédula de ciudadania, Cédula de extranjeria, PEP y NIT. Si se ingresan varios documentos se realiza consultas
                     en batch.</p>
                   <p></p>
@@ -430,7 +439,7 @@
               <div class="nomber-text-row">
                 <div class="nomber-text-row-inner">
                   <span>2. Consultas previas</span>
-                  <p>En este elemento se visualizan las consultas previas. Se visualiza: el número de la consulta, el nombre,
+                  <p>En este elemento se visualizan las consultas previas. <br> Se ve el detalle de: el número de la consulta, el nombre,
                     la fecha, si la consulta retorno un hallazgo, si la consulta presentó un error en alguna fuente, y un
                     botón de descarga del reporte en PDF.</p>
                   <p></p>
@@ -457,7 +466,6 @@
           <div class="img3">
             <img class="img-responsive" src="images/dashboard.png" alt="icon-image">
           </div>
-          <a href="#" class="acc wow fadeInUp">Create your account</a>
         </div>
       </div>
     </div>
@@ -519,7 +527,7 @@
                   <input name="p_url_confirmation" type="hidden" value="">
                   <input name="p_signature" type="hidden" id="signature" value="83bbcac78950921feb80baf2c47ddb7b" />
                   <input name="idboton" type="hidden" id="idboton" value="4454" />
-                  <input type="image" id="imagen" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/btn4.png"
+                  <input type="image" onClick="ga('send','pageview','/plan10');" id="imagen" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/btn4.png"
                   />
                 </form>
               </div>
@@ -565,7 +573,7 @@
                   <input name="p_url_confirmation" type="hidden" value="">
                   <input name="p_signature" type="hidden" id="signature" value="e50e9c6876a0f3a65ca72544f58e70ca" />
                   <input name="idboton" type="hidden" id="idboton" value="4458" />
-                  <input type="image" id="imagen" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/btn4.png"
+                  <input type="image" onClick="ga('send','pageview','/plan100');" id="imagen" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/btn4.png"
                   />
                 </form>
               </div>
@@ -611,7 +619,7 @@
                   <input name="p_url_confirmation" type="hidden" value="">
                   <input name="p_signature" type="hidden" id="signature" value="a32524f87ee033e35470e4ae5cdfb702" />
                   <input name="idboton" type="hidden" id="idboton" value="4457" />
-                  <input type="image" id="imagen" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/btn4.png"
+                  <input type="image" onClick="ga('send','pageview','/plan40');" id="imagen" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/btn4.png"
                   />
                 </form>
               </div>
@@ -640,7 +648,7 @@
             <br /> Podemos cumplir con las más altas necesidades de consumos.
           </p>
           <div class="getbtn">
-            <a href="#contact" class="get">Contáctanos</a>
+            <a href="#contact" class="get" onClick="ga('send','pageview','/contact/pricing');">Contáctanos</a>
           </div>
         </div>
       </div>
@@ -660,7 +668,7 @@
 
           <div class="mac">
             <a href="https://www.youtube.com/embed/4ghAWCEjpOM?autoplay=1" class="various fancybox">
-              <img src="images/play-btn.png" alt="play-btn">
+              <img src="images/play-btn.png" alt="play-btn" onClick="ga('send','pageview','/video');">
             </a>
           </div>
           <div class="video-section-image wow fadeInUp">
@@ -692,7 +700,7 @@
           <div class="two-colom-image">
             <img class="img-responsive" src="images/img1.png" alt="img1">
           </div>
-          <a href="#pricing" class="acc">Compra ahora</a>
+          <a href="#pricing" class="acc" onClick="ga('send','pageview','/pricing');">Compra ahora</a>
         </div>
 
 
@@ -851,7 +859,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 ">
           <div class="bnts wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-            <a href="#" class="btn2">Contáctanos</a>
+            <a href="#" onClick="ga('send','pageview','/contact');" class="btn2">Contáctanos</a>
           </div>
         </div>
       </div>
@@ -914,7 +922,7 @@
               <input type="email" name="email" placeholder="Email" required>
               <input type="text" name="cel" placeholder="Celular" required>
               <input type="text" name="company" placeholder="Empresa" required>
-              <button>Solicita la demo</button>
+              <button onClick="ga('send','pageview','/contact/demo');" >Solicita la demo</button>
               <p>Solo respondemos a correos empresariales</p>
             </form>
           </div>
