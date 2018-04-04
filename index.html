@@ -52,6 +52,7 @@
   <div class="se-pre-con"></div>
   <!-- header -->
   <div class="header" id="header">
+    <div id="particles-js"></div>
     <div class="container">
       <div class="row header-top" data-spy="affix" data-offset-top="70">
         <div class="container">
@@ -83,8 +84,8 @@
                     <a href="#video">Video</a>
                   </li>
                   <li>
-                      <a href="#fuentes">Fuentes</a>
-                    </li>
+                    <a href="#fuentes">Fuentes</a>
+                  </li>
                   <li>
                     <a href="#screens">Ejemplo</a>
                   </li>
@@ -218,7 +219,7 @@
               <strong>efectividad</strong> en los
               <strong>procesos de selección,</strong>
               <strong>contratación</strong> y
-              <strong>validación de terceros</strong>, a través de un reporte íntegro y comprensivo personalizado.
+              <strong>validación de terceros</strong>, a través de un reporte íntegro y comprensivo.
             </p>
           </div>
         </div>
@@ -229,9 +230,9 @@
               <i class="fas fa-thermometer-quarter fa-5x"></i>
             </div>
             <a href="#">Evita riesgos</a>
-            <p>Entregamos el panorama de <strong>riesgo</strong> completo. Evita la
-              <strong>incertidumbre</strong>, cumplimos con los requisitos más estrictos para
-              la validación de terceros.</p>
+            <p>Entregamos el panorama de
+              <strong>riesgo</strong> completo. Evita la
+              <strong>incertidumbre</strong>, cumplimos con los requisitos más estrictos para la validación de terceros.</p>
           </div>
         </div>
 
@@ -243,7 +244,8 @@
             <a href="#">Tiempo real</a>
             <p>Las
               <strong>consultas</strong> se realizan en
-              <strong>tiempo real</strong> directamente sobre sobre las fuentes. No usamos bases de datos precargadas, solo información al día.</p>
+              <strong>tiempo real</strong> directamente sobre sobre las fuentes. No usamos bases de datos precargadas, solo información
+              al día.</p>
           </div>
         </div>
 
@@ -253,8 +255,8 @@
               <i class="fas fa-hand-point-up fa-5x"></i>
             </div>
             <a href="#">Facilidad de uso</a>
-            <p>Las consultas se realizan
-              <strong>un solo click</strong>, el analista no requiere experiencia.</p>
+            <p>Las consultas se realizan con
+              <strong>un solo click</strong>, los analistas no requieren experiencia y pueden validar más personas en un día. </p>
           </div>
         </div>
 
@@ -281,8 +283,8 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="search-sec">
-            <span>Let’s start</span>
-            <h2>Sign up for trial</h2>
+            <span>Atención personalizada</span>
+            <h2>Contactanos</h2>
           </div>
         </div>
       </div>
@@ -290,16 +292,41 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="grop">
-
-            <div class="input-group">
-              <input type="text" class="form-control text1" placeholder="Your Name">
-              <input type="text" class="form-control text2" placeholder="Your Email">
-              <button class="btn btn-secondary" type="button">start your trial</button>
-
+            <form id="regForm" action="https://formspree.io/info@tusdatos.co" method="POST">
+              <input type="hidden" name="_language" value="es" />
+              <input type="hidden" name="_subject" value="Contacto tusdatos.co" />
+              <div class="tab">
+              <div class="input-group">
+                <input type="text" class="form-control " placeholder="Nombre" name="name" required>
+                <input type="email" class="form-control " placeholder="Email" name="email" required>
+                <input type="text" class="form-control " placeholder="Celular" name="cel" required>
+              </div>
             </div>
-
-            <p>Create Your
-              <a href="#"></a> Account Now & Get 30 days trial. No credit card required</p>
+            <div class="tab">
+              <div class="input-group">
+                <input type="text" class="form-control " placeholder="Empresa" name="company" required>
+                <input type="text" class="form-control " placeholder="Cargo" name="jobtitle" required>
+              </div>
+            </div>
+            <div class="tab">
+              Mensaje:
+                <div class="input-group">
+                  <textarea type="text" class="form-control " placeholder="Mensaje" name="message" required> </textarea>
+                </div>
+              </div>
+            <div style="overflow:auto;">
+                <div style="float:right;">
+                  <button type="button" id="prevBtn" class="btn btn-primary" onclick="nextPrev(-1)">Anterior</button>
+                  <button type="button" id="nextBtn" class="btn btn-secondary" onclick="nextPrev(1)">Siguiente</button>
+                </div>
+              </div>
+            <!-- Circles which indicates the steps of the form: -->
+            <div style="text-align:center;margin-top:40px;">
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -426,7 +453,7 @@
 
             </div>
 
-            
+
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 module">
@@ -440,8 +467,8 @@
   </div>
   <!-- Description End-->
 
-<!-- Pricing-->
-<div class="section9 dark-section " id="pricing">
+  <!-- Pricing-->
+  <div class="section9 dark-section " id="pricing">
     <div class="pricing-bg dark-color-bg">
     </div>
     <div class="container">
@@ -481,21 +508,22 @@
 
               </ul>
               <div class="plan-btn">
-                  <form id="frm_botonePayco" name="frm_botonePayco" method="post" action="https://secure.payco.co/checkout.php"> 
-                    <input name="p_cust_id_cliente" type="hidden" value="18048">
-                    <input name="p_key" type="hidden" value="11a209ef3caaeb7d0ea55d4237626ee3b8521e3f">
-                    <input name="p_id_invoice" type="hidden" value="">
-                    <input name="p_description" type="hidden" value=" 10 consultas tusdatos.co">
-                    <input name="p_currency_code" type="hidden" value="COP">
-                    <input name="p_amount" id="p_amount" type="hidden" value="70000">
-                    <input name="p_tax" id="p_tax" type="hidden" value="0">
-                    <input name="p_amount_base" id="p_amount_base" type="hidden" value="0">
-                    <input name="p_test_request" type="hidden" value="FALSE">
-                    <input name="p_url_response" type="hidden" value=""> 
-                    <input name="p_url_confirmation" type="hidden" value=""> 
-                    <input name="p_signature" type="hidden" id="signature"  value="83bbcac78950921feb80baf2c47ddb7b" />
-                    <input name="idboton"type="hidden" id="idboton"  value="4454" />  
-                    <input type="image" id="imagen" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/btn4.png" />
+                <form id="frm_botonePayco" name="frm_botonePayco" method="post" action="https://secure.payco.co/checkout.php">
+                  <input name="p_cust_id_cliente" type="hidden" value="18048">
+                  <input name="p_key" type="hidden" value="11a209ef3caaeb7d0ea55d4237626ee3b8521e3f">
+                  <input name="p_id_invoice" type="hidden" value="">
+                  <input name="p_description" type="hidden" value=" 10 consultas tusdatos.co">
+                  <input name="p_currency_code" type="hidden" value="COP">
+                  <input name="p_amount" id="p_amount" type="hidden" value="70000">
+                  <input name="p_tax" id="p_tax" type="hidden" value="0">
+                  <input name="p_amount_base" id="p_amount_base" type="hidden" value="0">
+                  <input name="p_test_request" type="hidden" value="FALSE">
+                  <input name="p_url_response" type="hidden" value="">
+                  <input name="p_url_confirmation" type="hidden" value="">
+                  <input name="p_signature" type="hidden" id="signature" value="83bbcac78950921feb80baf2c47ddb7b" />
+                  <input name="idboton" type="hidden" id="idboton" value="4454" />
+                  <input type="image" id="imagen" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/btn4.png"
+                  />
                 </form>
               </div>
             </div>
@@ -526,21 +554,22 @@
 
               </ul>
               <div class="plan-btn sil-btn">
-                  <form id="frm_botonePayco" name="frm_botonePayco" method="post" action="https://secure.payco.co/checkout.php"> 
-                    <input name="p_cust_id_cliente" type="hidden" value="18048">
-                    <input name="p_key" type="hidden" value="11a209ef3caaeb7d0ea55d4237626ee3b8521e3f">
-                    <input name="p_id_invoice" type="hidden" value="">
-                    <input name="p_description" type="hidden" value=" 100 consultas tusdatos.co">
-                    <input name="p_currency_code" type="hidden" value="COP">
-                    <input name="p_amount" id="p_amount" type="hidden" value="350000.00">
-                    <input name="p_tax" id="p_tax" type="hidden" value="0">
-                    <input name="p_amount_base" id="p_amount_base" type="hidden" value="0">
-                    <input name="p_test_request" type="hidden" value="FALSE">
-                    <input name="p_url_response" type="hidden" value=""> 
-                    <input name="p_url_confirmation" type="hidden" value=""> 
-                    <input name="p_signature" type="hidden" id="signature"  value="e50e9c6876a0f3a65ca72544f58e70ca" />
-                    <input name="idboton"type="hidden" id="idboton"  value="4458" />  
-                    <input type="image" id="imagen" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/btn4.png" />
+                <form id="frm_botonePayco" name="frm_botonePayco" method="post" action="https://secure.payco.co/checkout.php">
+                  <input name="p_cust_id_cliente" type="hidden" value="18048">
+                  <input name="p_key" type="hidden" value="11a209ef3caaeb7d0ea55d4237626ee3b8521e3f">
+                  <input name="p_id_invoice" type="hidden" value="">
+                  <input name="p_description" type="hidden" value=" 100 consultas tusdatos.co">
+                  <input name="p_currency_code" type="hidden" value="COP">
+                  <input name="p_amount" id="p_amount" type="hidden" value="350000.00">
+                  <input name="p_tax" id="p_tax" type="hidden" value="0">
+                  <input name="p_amount_base" id="p_amount_base" type="hidden" value="0">
+                  <input name="p_test_request" type="hidden" value="FALSE">
+                  <input name="p_url_response" type="hidden" value="">
+                  <input name="p_url_confirmation" type="hidden" value="">
+                  <input name="p_signature" type="hidden" id="signature" value="e50e9c6876a0f3a65ca72544f58e70ca" />
+                  <input name="idboton" type="hidden" id="idboton" value="4458" />
+                  <input type="image" id="imagen" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/btn4.png"
+                  />
                 </form>
               </div>
             </div>
@@ -571,27 +600,28 @@
 
               </ul>
               <div class="plan-btn">
-                  <form id="frm_botonePayco" name="frm_botonePayco" method="post" action="https://secure.payco.co/checkout.php"> 
-                    <input name="p_cust_id_cliente" type="hidden" value="18048">
-                    <input name="p_key" type="hidden" value="11a209ef3caaeb7d0ea55d4237626ee3b8521e3f">
-                    <input name="p_id_invoice" type="hidden" value="">
-                    <input name="p_description" type="hidden" value=" 40 counsultas tusdatos.co">
-                    <input name="p_currency_code" type="hidden" value="COP">
-                    <input name="p_amount" id="p_amount" type="hidden" value="200000.00">
-                    <input name="p_tax" id="p_tax" type="hidden" value="0">
-                    <input name="p_amount_base" id="p_amount_base" type="hidden" value="0">
-                    <input name="p_test_request" type="hidden" value="FALSE">
-                    <input name="p_url_response" type="hidden" value=""> 
-                    <input name="p_url_confirmation" type="hidden" value=""> 
-                    <input name="p_signature" type="hidden" id="signature"  value="a32524f87ee033e35470e4ae5cdfb702" />
-                    <input name="idboton"type="hidden" id="idboton"  value="4457" />  
-                    <input type="image" id="imagen" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/btn4.png" />
+                <form id="frm_botonePayco" name="frm_botonePayco" method="post" action="https://secure.payco.co/checkout.php">
+                  <input name="p_cust_id_cliente" type="hidden" value="18048">
+                  <input name="p_key" type="hidden" value="11a209ef3caaeb7d0ea55d4237626ee3b8521e3f">
+                  <input name="p_id_invoice" type="hidden" value="">
+                  <input name="p_description" type="hidden" value=" 40 counsultas tusdatos.co">
+                  <input name="p_currency_code" type="hidden" value="COP">
+                  <input name="p_amount" id="p_amount" type="hidden" value="200000.00">
+                  <input name="p_tax" id="p_tax" type="hidden" value="0">
+                  <input name="p_amount_base" id="p_amount_base" type="hidden" value="0">
+                  <input name="p_test_request" type="hidden" value="FALSE">
+                  <input name="p_url_response" type="hidden" value="">
+                  <input name="p_url_confirmation" type="hidden" value="">
+                  <input name="p_signature" type="hidden" id="signature" value="a32524f87ee033e35470e4ae5cdfb702" />
+                  <input name="idboton" type="hidden" id="idboton" value="4457" />
+                  <input type="image" id="imagen" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/btn4.png"
+                  />
                 </form>
               </div>
             </div>
           </div>
         </div>
-        
+
       </div>
 
 
@@ -601,25 +631,25 @@
 
   <!-- Get Download Link-->
   <div class="section11 dark-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12">
-            <div class="heading">
-              <span>contáctanos</span>
-              <h2>Planes corporativos</h2>
-            </div>
-            <p>
-              ¿Requieres un volumen mayor de consultas?
-              <br /> Podemos cumplir con las más altas necesidades de consumos.
-            </p>
-            <div class="getbtn">
-              <a href="#" class="get">Contáctanos</a>
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="heading">
+            <span>contáctanos</span>
+            <h2>Planes corporativos</h2>
+          </div>
+          <p>
+            ¿Requieres un volumen mayor de consultas?
+            <br /> Podemos cumplir con las más altas necesidades de consumos.
+          </p>
+          <div class="getbtn">
+            <a href="#" class="get">Contáctanos</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- Get Download Link End-->
+  </div>
+  <!-- Get Download Link End-->
 
   <!-- Video -->
   <div class="section4" id="video">
@@ -832,7 +862,7 @@
   </div>
   <!-- video End-->
 
-  
+
   <div class="screen-section dark-section dark-color-bg" id="screens">
     <div class="container">
       <div class="row">
@@ -846,8 +876,12 @@
       <div class="pro_det_tab_main">
         <div id="parentHorizontalTab">
           <ul class="resp-tabs-list hor_1">
-            <li><h4>Hallazgo</h4></li>
-            <li><h4>Sin hallazgo</h4></li>
+            <li>
+              <h4>Hallazgo</h4>
+            </li>
+            <li>
+              <h4>Sin hallazgo</h4>
+            </li>
           </ul>
           <div class="resp-tabs-container hor_1">
             <div>
@@ -868,29 +902,29 @@
 
   <!-- trial-->
   <div class="section13" id="trial">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 wow flipInX" data-wow-duration="3s">
-            <div class="heading">
-              <span>Let’s start</span>
-              <h2>Start your trial</h2>
-            </div>
-  
-            <div class="form">
-              <input type="text" placeholder="Name">
-              <input type="text" placeholder="Email">
-              <button>start your trial now</button>
-              <p>Create Your
-                <a href="#"></a> Account Now & Get 30 days trial. No credit card required</p>
-  
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 wow flipInX" data-wow-duration="3s">
+          <div class="heading">
+            <span>Let’s start</span>
+            <h2>Start your trial</h2>
+          </div>
+
+          <div class="form">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email">
+            <button>start your trial now</button>
+            <p>Create Your
+              <a href="#"></a> Account Now & Get 30 days trial. No credit card required</p>
+
           </div>
         </div>
       </div>
     </div>
-    <!-- trial End-->
+  </div>
+  <!-- trial End-->
 
-  
+
   <!-- footer-->
   <!-- Contact Details-->
   <div class="section14">
@@ -937,6 +971,39 @@
     <div class="last-footer">
       <div class="container">
         <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-4 footer-contact-info wow fadeInDown">
+            <h3>Contacto</h3>
+            <p>
+              <i class="far fa-building"></i> Calle 93 #19-55</p>
+            <p>
+              <i class="fas fa-map-marker"></i> Bogotá, Colombia</p>
+            <p>
+              <i class="fa fa-phone"></i> Tel: +571 310 3442</p>
+            <p>
+              <i class="fa fa-envelope"></i> Email:
+              <a href="mailto:info@tusdatos.co">info@tusdatos.co</a>
+            </p>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-4 footer-social wow fadeInUp">
+            <h3>Redes sociales</h3>
+            <p>
+              Síguenos en nuestras redes sociales.
+            </p>
+            <p class="ico">
+              <a href="https://twitter.com/tusdatosco" rel="nofollow">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/company-beta/24782874" rel="nofollow">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://www.facebook.com/tusdatosco" rel="nofollow">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="row">
           <span>Con el apoyo de: </span>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <img class="apps" src="images/appm.png" title="mintic, apps.co">
@@ -947,25 +1014,6 @@
             <div class="footer-copy">
               <p>© Copyright 2018 tusdatos.co
               </p>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="foot-social">
-              <a href="#">
-                <i class="icofont icofont-social-facebook"></i>
-              </a>
-              <a href="#">
-                <i class="icofont icofont-social-twitter"></i>
-              </a>
-              <a href="#">
-                <i class="icofont icofont-social-google-plus"></i>
-              </a>
-              <a href="#">
-                <i class="icofont icofont-social-pinterest"></i>
-              </a>
-              <a href="#">
-                <i class="icofont icofont-social-youtube-play"></i>
-              </a>
             </div>
           </div>
         </div>
@@ -1001,9 +1049,10 @@
   <!-- Retina js -->
   <script src="js/retina.min.js"></script>
   <!-- Retina js -->
-
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
     $(document).ready(function () {
+
 
       //Screenshot in details slider ==============================================
 
@@ -1123,7 +1172,194 @@
 
     });
   </script>
+  <script>
+    var currentTab = 0; // Current tab is set to be the first tab (0)
+    showTab(currentTab); // Display the current tab
 
+    function showTab(n) {
+      // This function will display the specified tab of the form ...
+      var x = document.getElementsByClassName("tab");
+      x[n].style.display = "block";
+      // ... and fix the Previous/Next buttons:
+      if (n == 0) {
+        document.getElementById("prevBtn").style.display = "none";
+      } else {
+        document.getElementById("prevBtn").style.display = "inline";
+      }
+      if (n == (x.length - 1)) {
+        document.getElementById("nextBtn").innerHTML = "Enviar";
+      } else {
+        document.getElementById("nextBtn").innerHTML = "Siguiente";
+      }
+      // ... and run a function that displays the correct step indicator:
+      fixStepIndicator(n)
+    }
+
+    function nextPrev(n) {
+      // This function will figure out which tab to display
+      var x = document.getElementsByClassName("tab");
+      // Exit the function if any field in the current tab is invalid:
+      if (n == 1 && !validateForm()) return false;
+      // Hide the current tab:
+      x[currentTab].style.display = "none";
+      // Increase or decrease the current tab by 1:
+      currentTab = currentTab + n;
+      // if you have reached the end of the form... :
+      if (currentTab >= x.length) {
+        //...the form gets submitted:
+        document.getElementById("regForm").submit();
+        return false;
+      }
+      // Otherwise, display the correct tab:
+      showTab(currentTab);
+    }
+
+    function validateForm() {
+      // This function deals with validation of the form fields
+      var x, y, i, valid = true;
+      x = document.getElementsByClassName("tab");
+      y = x[currentTab].getElementsByTagName("input");
+      // A loop that checks every input field in the current tab:
+      for (i = 0; i < y.length; i++) {
+        // If a field is empty...
+        if (y[i].value == "") {
+          // add an "invalid" class to the field:
+          y[i].className += " invalid";
+          // and set the current valid status to false:
+          valid = false;
+        }
+      }
+      // If the valid status is true, mark the step as finished and valid:
+      if (valid) {
+        document.getElementsByClassName("step")[currentTab].className += " finish";
+      }
+      return valid; // return the valid status
+    }
+
+    function fixStepIndicator(n) {
+      // This function removes the "active" class of all steps...
+      var i, x = document.getElementsByClassName("step");
+      for (i = 0; i < x.length; i++) {
+        x[i].className = x[i].className.replace(" active", "");
+      }
+      //... and adds the "active" class to the current step:
+      x[n].className += " active";
+    }
+  </script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 80,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: "#ffffff"
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000"
+          },
+          polygon: {
+            nb_sides: 5
+          },
+          image: {
+            src: "img/github.svg",
+            width: 100,
+            height: 100
+          }
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: {
+            enable: false,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 40,
+            size_min: 0.1,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 6,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200
+          }
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: false,
+            mode: "repulse"
+          },
+          onclick: {
+            enable: true,
+            mode: "push"
+          },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 400,
+            line_linked: {
+              opacity: 1
+            }
+          },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4
+          },
+          push: {
+            particles_nb: 4
+          },
+          remove: {
+            particles_nb: 2
+          }
+        }
+      },
+      retina_detect: true
+    });
+
+    requestAnimationFrame(update);
+  </script>
 
 </body>
 
