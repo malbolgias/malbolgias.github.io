@@ -411,7 +411,26 @@ features
 	margin-top: 50px;
 }
 
+.centert{
+	font-size: 18px;
+	text-align: center;
+	font-weight: 300;
+	color: #3e355f;
+}
+
 /* End features */
+
+.section-screen {
+	padding-top: 80px;
+	padding-bottom: 60px;
+}
+
+.centert{
+	font-size: 18px;
+	text-align: center;
+	font-weight: 400;
+	color: #3e355f;
+}
 
 /*-----------------------------------------------------------------------------------
 
@@ -567,7 +586,7 @@ video
 	background: #f2f5f9;
 	background-size: cover;
 	width: 100%;
-	padding: 70px 0 0 0;
+	padding: 70px 0 40px 0;
 }
 
 .section4 p {
