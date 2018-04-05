@@ -47,16 +47,19 @@
 
   <!--RESPONSIVE TAB -->
   <link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35843234-5"></script>
   <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-35843234-5', 'auto');
-    ga('send', 'pageview');
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-35843234-5');
   </script>
+
 </head>
 
 <body>
@@ -123,8 +126,8 @@
             <strong>Cédula, NIT, PEP y Cédula extranjería</strong>
           </p>
           <div class="bnts wow fadeInUp">
-            <a href="#contact" class="btn2" onClick="ga('send','pageview','/contact');">Contáctanos</a>
-            <a href="#pricing" class="btn2" onClick="ga('send','pageview','/pricing');">Compra ahora</a>
+            <a href="#contact" class="btn2" onClick="gatag('event','contact');">Contáctanos</a>
+            <a href="#pricing" class="btn2" onClick="gatag('event','pricing');">Compra ahora</a>
           </div>
         </div>
       </div>
@@ -214,7 +217,7 @@
             <div class="f-img">
               <i class="far fa-lightbulb fa-5x"></i>
             </div>
-            <a >Toma de decisiones</a>
+            <a>Toma de decisiones</a>
             <p>Ayudamos a la toma de decisiones con base en el
               <strong>perfil de riesgo</strong> de las personas y empresas según sus
               <strong>datos públicos</strong>, socioeconómicos y legales.</p>
@@ -226,7 +229,7 @@
             <div class="f-img">
               <i class="fas fa-chart-line fa-5x"></i>
             </div>
-            <a >Mejora de procesos</a>
+            <a>Mejora de procesos</a>
             <p>Mejoramos la
               <strong>efectividad</strong> en los
               <strong>procesos de selección,</strong>
@@ -253,7 +256,7 @@
             <div class="f-img">
               <i class="fas fa-bolt fa-5x"></i>
             </div>
-            <a >Tiempo real</a>
+            <a>Tiempo real</a>
             <p>
               <strong>Consultas</strong> en
               <strong>tiempo real</strong> directamente sobre sobre las fuentes. No usamos bases de datos precargadas, solo información
@@ -268,7 +271,7 @@
             </div>
             <a>Facilidad de uso</a>
             <p>Las consultas se realizan en
-              <strong>un solo click</strong>, es posible realizar cientos de consultas paralelas y en pocos minutos.  </p>
+              <strong>un solo click</strong>, es posible realizar cientos de consultas paralelas y en pocos minutos. </p>
           </div>
         </div>
 
@@ -418,16 +421,17 @@
             <div class="left-heading">
               <h2 class="wow fadeInUp">Dashboard</h2>
             </div>
-            <p class="wow fadeInUp">El dashboard empresarial de tusdatos permite: lanzar consultas, ver consultas anteriores, generar
-              reportes en PDF, re-procesar consultas con errores y visualizar el estado del plan.
+            <p class="wow fadeInUp">El dashboard empresarial de tusdatos permite: lanzar consultas, ver consultas anteriores, generar reportes en
+              PDF, re-procesar consultas con errores y visualizar el estado del plan.
             </p>
 
             <div class="nomber-text wow fadeInUp">
               <div class="nomber-text-row">
                 <div class="nomber-text-row-inner">
                   <span>1. Formulario</span>
-                  <p>Ingreso de documentos por consultar, <br> por ejemplo: Cédula de ciudadania, Cédula de extranjeria, PEP y NIT. Si se ingresan varios documentos se realiza consultas
-                    en batch.</p>
+                  <p>Ingreso de documentos por consultar,
+                    <br> por ejemplo: Cédula de ciudadania, Cédula de extranjeria, PEP y NIT. Si se ingresan varios documentos
+                    se realiza consultas en batch.</p>
                   <p></p>
                 </div>
                 <div class="clear"></div>
@@ -436,8 +440,8 @@
               <div class="nomber-text-row">
                 <div class="nomber-text-row-inner">
                   <span>2. Consultas previas</span>
-                  <p>Permite detallar: el número de la consulta, el nombre,
-                    la fecha, si la consulta retornó un hallazgo y si la presentó un error en alguna fuente. 
+                  <p>Permite detallar: el número de la consulta, el nombre, la fecha, si la consulta retornó un hallazgo y si
+                    la presentó un error en alguna fuente.
                     <br>Cuenta con un botón de descarga del reporte en PDF.</p>
                   <p></p>
                 </div>
@@ -447,8 +451,7 @@
               <div class="nomber-text-row">
                 <div class="nomber-text-row-inner">
                   <span>3. Estado del plan</span>
-                  <p>Contabiliza el número de consultas realizadas y las restantes en el plan y el tipo de
-                    plan adquirido.</p>
+                  <p>Contabiliza el número de consultas realizadas y las restantes en el plan y el tipo de plan adquirido.</p>
                   <p></p>
                 </div>
                 <div class="clear"></div>
@@ -490,7 +493,8 @@
               <div class="plan-ttl">
                 <span>Plan 10</span>
                 <h3>
-                  <strong class="currency-sign">$</strong>70<strong class="currency-sign">K</strong>
+                  <strong class="currency-sign">$</strong>70
+                  <strong class="currency-sign">K</strong>
                 </h3>
               </div>
 
@@ -919,7 +923,7 @@
               <input type="email" name="email" placeholder="Email" required>
               <input type="text" name="cel" placeholder="Celular" required>
               <input type="text" name="company" placeholder="Empresa" required>
-              <button onClick="ga('send','pageview','/contact/demo');" >Solicita la demo</button>
+              <button onClick="ga('send','pageview','/contact/demo');">Solicita la demo</button>
               <p>Solo respondemos a direcciónes de correos empresariales</p>
             </form>
           </div>
@@ -1029,7 +1033,7 @@
   <!-- footer End-->
 
   <script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC"
-  crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   <script src="js/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
