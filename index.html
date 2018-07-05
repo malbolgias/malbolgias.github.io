@@ -1237,6 +1237,8 @@
       }
       if (n == (x.length - 1)) {
         document.getElementById("nextBtn").innerHTML = "Enviar";
+        // document.getElementById("nextBtn").onclick = "nextPrev(1);";
+
       } else {
         document.getElementById("nextBtn").innerHTML = "Siguiente";
       }
@@ -1257,6 +1259,7 @@
       if (currentTab >= x.length) {
         //...the form gets submitted:
         document.getElementById("regForm").submit();
+        gtag('event','contact-sent');
         return false;
       }
       // Otherwise, display the correct tab:
