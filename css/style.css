@@ -25,7 +25,7 @@ body {
 .heading {
 	float: left;
 	width: 100%;
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 }
 
 .heading span,
@@ -253,7 +253,7 @@ free trial Sign up
 
 .section1 {
 	background: #f2f5f9;
-	padding: 100px 0 130px 0;
+	padding: 60px 0 80px 0;
 	text-align: center;
 	margin-top: 100px;
 }
@@ -321,7 +321,7 @@ features
 -----------------------------------------------------------------------------------*/
 
 .section2 {
-	padding-top: 80px;
+	padding-top: 60px;
 }
 
 .f-box {
@@ -373,8 +373,8 @@ features
 /* End features */
 
 .section-screen {
-	padding-top: 80px;
-	padding-bottom: 60px;
+	padding-top: 40px;
+	padding-bottom: 30px;
 }
 
 .centert{
@@ -488,7 +488,7 @@ features
 }
 
 .section3 {
-	padding: 180px 0;
+	padding: 60px 0;
 }
 
 .two-colom-image {
@@ -584,7 +584,7 @@ Our strong numbers
 -----------------------------------------------------------------------------------*/
 
 .section5 {
-	padding: 100px 0;
+	padding: 60px 0;
 }
 
 .f-img {
@@ -877,7 +877,14 @@ pricing
 -----------------------------------------------------------------------------------*/
 
 .section9 {
-	padding: 50px 0;
+	padding: 20px 0;
+}
+
+.section9 p {
+	color: #FFFFFF;
+	margin-bottom: 0;
+	text-align: center;
+	font-size: 18px;
 }
 
 .pricing-bg {
@@ -889,7 +896,7 @@ pricing
 .pricing-inner-container {
 	float: left;
 	width: 100%;
-	margin-top: -372px;
+	margin-top: -412px;
 }
 
 .pricing-boxes {
@@ -907,7 +914,7 @@ pricing
 }
 
 .plan-ttl {
-	padding: 50px 0 60px 0;
+	padding: 20px 0 25px 0;
 	text-align: center;
 	border-radius: 4px 4px 0 0px;
 	background-size: contain;
@@ -969,12 +976,12 @@ pricing
 	list-style: none;
 	padding-left: 0;
 	padding-top: 0;
-	padding-bottom: 80px;
+	padding-bottom: 40px;
 }
 
 .plan li {
 	border-bottom: 1px solid #f3f1f1;
-	padding: 23px 0;
+	padding: 10px 0;
 }
 
 .plan li span {
@@ -1140,7 +1147,7 @@ Lest start yor project now
 -----------------------------------------------------------------------------------*/
 
 .section11 {
-	padding: 100px 0;
+	padding: 60px 0;
 	/* The image used */
 	font-size: 2em;
 	background: #1080f2 url("../images/parallaxbg.jpg") no-repeat;
@@ -1574,7 +1581,7 @@ Responsive CSS for all sections
 		margin-top: 40px;
 	}
 	.section3 {
-		padding: 100px 0;
+		padding: 60px 0;
 	}
 	.content-area-second {
 		padding: 0 0 60px 0;
@@ -1681,17 +1688,17 @@ Responsive CSS for all sections
 
 @media (max-width:767px) {
 	.team-box {
-		margin-bottom: 75px;
+		margin-bottom: 55px;
 	}
 	.section1,
 	.section6 {
 		padding: 50px 0;
 	}
 	.fool-box {
-		margin-bottom: 70px;
+		margin-bottom: 50px;
 	}
 	.plan {
-		margin-bottom: 75px;
+		margin-bottom: 55px;
 	}
 	.martop {
 		margin-top: 0;
