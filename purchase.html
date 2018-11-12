@@ -22,7 +22,7 @@
                 <header id="main-header" style="margin-top:20px">
                     <div class="row">
                         <div class="col-lg-12 franja">
-                            <img class="center-block" src="https://369969691f476073508a-60bf0867add971908d4f26a64519c2aa.ssl.cf5.rackcdn.com/btns/epayco/logo1.png" style="">
+                            <img class="center-block" src="images/logo.png" style="">
                         </div>
                     </div>
                 </header>
@@ -65,6 +65,11 @@
                                             <td class="" id="total">
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td class="bold">Mensaje</td>
+                                            <td class="" id="msg">
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -100,7 +105,7 @@
                     var ref_payco = getQueryParam('ref_payco');
                     //Url Rest Metodo get, se pasa la llave y la ref_payco como paremetro
                     var urlapp = "https://api.secure.payco.co/validation/v1/reference/" + ref_payco;
-
+                    var msg = ""
                     $.get(urlapp, function(response) {
 
 
@@ -109,20 +114,23 @@
                             if (response.data.x_cod_response == 1) {
                                 //Codigo personalizado
                                 alert("Transaccion Aprobada");
-
                                 console.log('transacción aceptada');
+                                msg = "Gracias por la compra. Muy pronto recibirás instrucciones a tu email acerca de cómo acceder a nuestra plataforma. Recuerda que solo activamos las cuentas asociadas a un email institucional.";
                             }
                             //Transaccion Rechazada
                             if (response.data.x_cod_response == 2) {
                                 console.log('transacción rechazada');
+                                msg = "La transacción fue rechazada por favor intenta nuevamente.";
                             }
                             //Transaccion Pendiente
                             if (response.data.x_cod_response == 3) {
                                 console.log('transacción pendiente');
+                                msg = "Gracias por la compra, la transacción aún esta siendo procesada. Esto puede tardar hasta dos horas. En el momento que sea exitosa recibirás instrucciones a tu email acerca de cómo acceder a nuestra plataforma. Recuerda que solo activamos las cuentas asociadas a un email institucional.";
                             }
                             //Transaccion Fallida
                             if (response.data.x_cod_response == 4) {
                                 console.log('transacción fallida');
+                                msg = "La transacción no fue exitosa. Por favor intenta nuevamente.";
                             }
 
                             $('#fecha').html(response.data.x_transaction_date);
@@ -133,7 +141,7 @@
                             $('#banco').text(response.data.x_bank_name);
                             $('#autorizacion').text(response.data.x_approval_code);
                             $('#total').text(response.data.x_amount + ' ' + response.data.x_currency_code);
-
+                            $('#msg').text(msg);
 
                         } else {
                             alert("Error consultando la información");
