@@ -137,6 +137,10 @@ body {
 	font-size: 16px;
 }
 
+.dropdown-menu li a{
+	color: black;
+}
+
 .menu li a:hover {
 	border-bottom: 1px solid #fff;
 }
