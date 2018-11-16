@@ -51,7 +51,6 @@ h2.resp-accordion {
 .resp-tab-active {
     background:#2bd6ee !important;
 	color:#FFF !important;
-	
 	-webkit-box-shadow: 0px 15px 32px 1px rgba(0,0,0,0.23);
 	-moz-box-shadow: 0px 15px 32px 1px rgba(0,0,0,0.23);
 	box-shadow: 0px 15px 32px 1px rgba(0,0,0,0.23);
