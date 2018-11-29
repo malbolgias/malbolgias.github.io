@@ -328,7 +328,37 @@
 
       <div class="row">
         <div class="col-lg-12">
-            <div class="pipedriveWebForms" data-pd-webforms="https://pipedrivewebforms.com/form/4282136331722900eaf47e09922ece034392609"><script src="https://cdn.pipedriveassets.com/web-form-assets/webforms.min.js"></script></div>
+          <div class="grop">
+            <form id="regForm" action="https://formspree.io/info@tusdatos.co" method="POST">
+              <input type="hidden" name="_language" value="es" />
+              <input type="hidden" name="_subject" value="Contacto tusdatos.co" />
+              <div class="tab">
+                <div class="input-group">
+                  <input type="text" class="form-control " placeholder="Nombre" name="name" required>
+                  <input type="email" class="form-control " placeholder="Email empresarial" name="email" required>
+                  <input type="text" class="form-control " placeholder="Celular" name="cel" required>
+                </div>
+              </div>
+              <div class="tab">
+                <div class="input-group">
+                  <input type="text" class="form-control " placeholder="Empresa" name="company" required>
+                  <input type="text" class="form-control " placeholder="Cargo" name="jobtitle" required>
+                  <textarea rows="4" class="form-control " placeholder="Mensaje" name="message" required>Mensaje</textarea>
+                </div>
+              </div>
+              <div style="overflow:auto;">
+                <div style="float:right;">
+                  <button type="button" id="prevBtn" class="btn btn-primary" onclick="nextPrev(-1)">Anterior</button>
+                  <button type="button" id="nextBtn" class="btn btn-secondary" onclick="nextPrev(1)">Siguiente</button>
+                </div>
+              </div>
+              <!-- Circles which indicates the steps of the form: -->
+              <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -538,6 +568,12 @@
                 <li class="yes">
                   <span>Capturas de pantalla</span>
                 </li>
+                <li class="no">
+                  <span>Relacionados</span>
+                </li>
+                <li class="no">
+                  <span>Noticias reputacionales</span>
+                </li>
                 <li class="yes">
                   <span>Reportes en PDF</span>
                 </li>
@@ -585,6 +621,12 @@
                   <span>Capturas de pantalla</span>
                 </li>
                 <li class="yes">
+                  <span>Relacionados</span>
+                </li>
+                <li class="yes">
+                  <span>Noticias reputacionales</span>
+                </li>
+                <li class="yes">
                   <span>Reportes en PDF</span>
                 </li>
                 <li class="yes">
@@ -628,6 +670,12 @@
                 </li>
                 <li class="yes">
                   <span>Capturas de pantalla</span>
+                </li>
+                <li class="no">
+                  <span>Relacionados</span>
+                </li>
+                <li class="no">
+                  <span>Noticias reputacionales</span>
                 </li>
                 <li class="yes">
                   <span>Reportes en PDF</span>
@@ -1105,7 +1153,18 @@
             <span>Conoce el producto</span>
             <h2>Solicita una demo</h2>
           </div>
-          <div class="pipedriveWebForms" data-pd-webforms="https://pipedrivewebforms.com/form/2f9bc00d6b2ae136454269247433b8744392609"><script src="https://cdn.pipedriveassets.com/web-form-assets/webforms.min.js"></script></div>
+          <div class="form">
+            <form action="https://formspree.io/info@tusdatos.co" method="POST">
+              <input type="hidden" name="_language" value="es" />
+              <input type="hidden" name="_subject" value="Demo tusdatos.co" />
+              <input type="text" name="Name" placeholder="Name" required>
+              <input type="email" name="email" placeholder="Email empresarial" required>
+              <input type="text" name="cel" placeholder="Celular" required>
+              <input type="text" name="company" placeholder="Empresa" required>
+              <button onClick="gtag('event','demo');">Solicita la demo</button>
+              <p>Solo respondemos a direcciónes de correos empresariales</p>
+            </form>
+          </div>
         </div>
       </div>
     </div>
